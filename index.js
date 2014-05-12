@@ -1,6 +1,6 @@
-var timezone = require('timezone')
+var tz = require('timezone')
 
-module.exports = function(inputBizDays, startDate, timezoneString){
+module.exports = function(inputBizDays, startDate, timezone){
   var getDayOfWeek
     , startDayOfWeek
     , daysToAdd
@@ -9,12 +9,12 @@ module.exports = function(inputBizDays, startDate, timezoneString){
   startDate || (startDate = new Date())
 
   getDayOfWeek = function getDayOfWeek(date){
-    if (timezoneString)
-      return timezone(require('timezone/' + timezoneString))(date, timezoneString, '%w')
+    if (timezone)
+      return parseInt(tz(timezone)(date, timezone, '%w'), 10)
     else return date.getDay()
   }
 
-  startDayOfWeek = parseInt(getDayOfWeek(startDate, timezoneString, '%w'), 10)
+  startDayOfWeek = getDayOfWeek(startDate)
   weeksToAdd = Math.floor(inputBizDays / 5)
   // we're doing some funky math here to accomodate negative numbers
   daysToAdd = ((inputBizDays % 5) + 5) % 5
