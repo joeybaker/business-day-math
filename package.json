@@ -41,7 +41,7 @@
     "gulp-cached": "0.0.3",
     "gulp-exec": "^1.0.4",
     "gulp-git": "^0.3.3",
-    "gulp-jscs": "^0.3.2",
+    "gulp-jscs": "^0.4.2",
     "gulp-jshint": "^1.5.0",
     "gulp-mocha": "^0.4.1",
     "gulp-todo": "^0.1.5",
