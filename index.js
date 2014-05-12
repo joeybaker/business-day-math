@@ -1,6 +1,6 @@
 var timezone = require('timezone')
 
-module.exports = function(inputBizDays, startDate, timezoneString) {
+module.exports = function(inputBizDays, startDate, timezoneString){
   var getDayOfWeek
     , startDayOfWeek
     , daysToAdd
@@ -19,7 +19,8 @@ module.exports = function(inputBizDays, startDate, timezoneString) {
   // we're doing some funky math here to accomodate negative numbers
   daysToAdd = ((inputBizDays % 5) + 5) % 5
 
-  // the following logic is from http://javascript.about.com/library/blbusdayadd.htm (which I'm ashamed to admit, but hell, this is a very concise algorithm)
+  // the following logic is from http://javascript.about.com/library/blbusdayadd.htm
+  // (which I'm ashamed to admit, but hell, this is a very concise algorithm)
   // we're starting on a saturday and are adding days
   if (startDayOfWeek === 6 && daysToAdd > -1) {
     // we have no days to add, but we want to make sure to end up on a weekday
