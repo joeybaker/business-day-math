@@ -29,4 +29,5 @@ Tests are [prova](https://github.com/azer/prova), based on [tape](https://github
 To publish, run `gulp publish --bump=patch`
 
 ## Changelog
-### 1.0.0 Initial Release
+### 1.0.0
+Initial Release
