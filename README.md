@@ -1,5 +1,7 @@
 # Business Day Math
 
+[![NPM](https://nodei.co/npm/business-day-math.png)](https://nodei.co/npm/business-day-math/) [![Build Status](https://travis-ci.org/joeybaker/business-day-math.png?branch=master)](https://travis-ci.org/joeybaker/business-day-math)
+
 Business days are hard to calculate because you have to jump weekends. In addition, calculating across different timezones is difficult because the day of the week that the start date is on can vary.
 
 This module allows you to accommadate all these needs.
