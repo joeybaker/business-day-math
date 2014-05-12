@@ -10,7 +10,7 @@ module.exports = function(inputBizDays, startDate, timezone){
 
   getDayOfWeek = function getDayOfWeek(date){
     if (timezone)
-      return parseInt(tz(timezone)(date, timezone, '%w'), 10)
+      return parseInt(tz(timezone)(date, Object.keys(timezone.zones)[0], '%w'), 10)
     else return date.getDay()
   }
 

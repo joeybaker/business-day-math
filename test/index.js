@@ -1,7 +1,7 @@
 var test = require('prova')
   , addBusinessDays = require('../index.js')
-  , londonTz = 'Europe/London'
-  , laTz = 'America/Los_Angeles'
+  , londonTz = require('timezone/Europe/London')
+  , laTz = require('timezone/America/Los_Angeles')
   , previousFriPT = new Date('Fri May 2 2014 17:00:00 GMT-0700 (PST)')
   , previousFriGMT = new Date('Fri May 2 2014 17:00:00 GMT-0000')
   , monGMT = new Date('Mon May 5 2014 17:00:00 GMT-0000')
