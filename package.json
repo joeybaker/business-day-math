@@ -1,0 +1,41 @@
+{
+  "name": "business-days",
+  "version": "1.0.0",
+  "description": "Add or subtract business days from a start date. Is timezone aware.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/prova test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joeybaker/business-day-math.git"
+  },
+  "keywords": [
+    "business",
+    "day",
+    "from",
+    "to",
+    "today",
+    "math",
+    "timezone"
+  ],
+  "authors": [
+    {
+      "name": "Joey Baker",
+      "email": "joey@byjoeybaker.com"
+    }
+  ],
+  "license": "Artistic-2.0",
+  "bugs": {
+    "url": "https://github.com/joeybaker/business-day-math/issues"
+  },
+  "dependencies": {
+    "timezone": "0.0.30"
+  },
+  "devDependencies": {
+    "prova": "^1.7.2"
+  }
+}
