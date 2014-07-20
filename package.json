@@ -33,7 +33,7 @@
     "url": "https://github.com/joeybaker/business-day-math/issues"
   },
   "dependencies": {
-    "timezone": "0.0.30"
+    "timezone": "0.0.33"
   },
   "devDependencies": {
     "gulp": "^3.8.6",
