@@ -9,6 +9,8 @@ var test = require('prova')
   , wedPT = new Date('Wed May 7 2014 17:00:00 GMT-0700 (PST)')
   , thuPT = new Date('Thu May 8 2014 17:00:00 GMT-0700 (PST)')
   , friPT = new Date('Fri May 9 2014 17:00:00 GMT-0700 (PST)')
+  , satPT = new Date('Sat May 10 2014 17:00:00 GMT-0700 (PST)')
+  , sunPT = new Date('Sun May 11 2014 17:00:00 GMT-0700 (PST)')
   , nextMonPT = new Date('Mon May 12 2014 17:00:00 GMT-0700 (PST)')
   , nextMonGMT = new Date('Mon May 12 2014 00:00:00 GMT-0000')
 
@@ -115,7 +117,26 @@ test('basic math without a timezone', function(t){
       , monGMT
     ).toString()
     , previousFriGMT.toString()
-    , 'subtracts a days over a weekend'
+    , 'subtracts a day over a weekend'
+  )
+
+  t.equal(
+    addBusinessDays(
+      -1
+      , sunPT
+    ).toString()
+    , friPT.toString()
+    , 'subtracts a day from a Sunday'
+  )
+
+  t.equal(
+    addBusinessDays(
+      -1
+      , satPT
+    ).toString()
+    , friPT.toString()
+    , 'subtracts a day from a Saturday'
+  )
   )
 
   t.end()

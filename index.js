@@ -5,6 +5,7 @@ module.exports = function(inputBizDays, startDate, timezone){
     , startDayOfWeek
     , daysToAdd
     , weeksToAdd
+    , absBizDays
 
   startDate || (startDate = new Date())
 
@@ -14,10 +15,15 @@ module.exports = function(inputBizDays, startDate, timezone){
     else return date.getDay()
   }
 
+  absBizDays = Math.abs(inputBizDays)
+
   startDayOfWeek = getDayOfWeek(startDate)
-  weeksToAdd = Math.floor(inputBizDays / 5)
+
+  // get the count of weeks then set to a netative number if we're subtracting
+  weeksToAdd = Math.floor(absBizDays / 5) * (inputBizDays < 0 ? -1 : 1)
+
   // we're doing some funky math here to accomodate negative numbers
-  daysToAdd = ((inputBizDays % 5) + 5) % 5
+  daysToAdd = inputBizDays % 5
 
   // the following logic is from http://javascript.about.com/library/blbusdayadd.htm
   // (which I'm ashamed to admit, but hell, this is a very concise algorithm)
