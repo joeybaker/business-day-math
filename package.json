@@ -36,18 +36,19 @@
     "timezone": "0.0.30"
   },
   "devDependencies": {
-    "gulp": "^3.5.5",
-    "gulp-bump": "^0.1.6",
-    "gulp-cached": "0.0.3",
-    "gulp-exec": "^1.0.4",
-    "gulp-git": "^0.3.3",
-    "gulp-jscs": "^0.4.2",
-    "gulp-jshint": "^1.5.0",
-    "gulp-mocha": "^0.4.1",
-    "gulp-todo": "^0.1.5",
-    "gulp-util": "~2.2.14",
-    "jshint-stylish": "^0.1.5",
-    "minimist": "^0.1.0",
-    "prova": "^1.7.2"
+    "gulp": "^3.8.6",
+    "gulp-bump": "^0.1.10",
+    "gulp-cached": "1.0.1",
+    "gulp-exec": "^2.0.1",
+    "gulp-git": "^0.4.3",
+    "gulp-jscs": "^0.6.0",
+    "gulp-jshint": "^1.7.1",
+    "gulp-mocha": "^0.5.1",
+    "gulp-todo": "^0.3.7",
+    "gulp-util": "~3.0.0",
+    "jshint-stylish": "^0.4.0",
+    "minimist": "^0.2.0",
+    "prova": "^1.14.0",
+    "run-sequence": "^0.3.6"
   }
 }
