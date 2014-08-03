@@ -90,19 +90,50 @@ test('basic math with a timezone', function(t){
     , 'subtracts a days over a weekend'
   )
 
-  t.end()
-})
-
-test('basic math without a timezone', function(t){
   t.equal(
     addBusinessDays(
       2
       , thuPT
+      , laTz
     ).toString()
     , nextMonPT.toString()
     , 'it bumps over a weekend if adding 2 days from a thurs in PT'
   )
 
+  t.equal(
+    addBusinessDays(
+      -1
+      , sunPT
+      , laTz
+    ).toString()
+    , friPT.toString()
+    , 'subtracts a day from a Sunday'
+  )
+
+  t.equal(
+    addBusinessDays(
+      -1
+      , satPT
+      , laTz
+    ).toString()
+    , friPT.toString()
+    , 'subtracts a day from a Saturday'
+  )
+
+  t.equal(
+    addBusinessDays(
+      14
+      , monPT
+      , laTz
+    ).toString()
+    , nextNextFriPT.toString()
+    , 'adds days over weeks'
+  )
+
+  t.end()
+})
+
+test('basic math without a timezone', function(t){
   t.equal(
     addBusinessDays(
       -1
@@ -119,33 +150,6 @@ test('basic math without a timezone', function(t){
     ).toString()
     , previousFriGMT.toString()
     , 'subtracts a day over a weekend'
-  )
-
-  t.equal(
-    addBusinessDays(
-      -1
-      , sunPT
-    ).toString()
-    , friPT.toString()
-    , 'subtracts a day from a Sunday'
-  )
-
-  t.equal(
-    addBusinessDays(
-      -1
-      , satPT
-    ).toString()
-    , friPT.toString()
-    , 'subtracts a day from a Saturday'
-  )
-
-  t.equal(
-    addBusinessDays(
-      14
-      , monPT
-    ).toString()
-    , nextNextFriPT.toString()
-    , 'adds days over weeks'
   )
 
   t.end()
