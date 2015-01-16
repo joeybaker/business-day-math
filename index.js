@@ -1,24 +1,24 @@
-var tz = require('timezone')
 'use strict';
 
-module.exports = function(inputBizDays, startDate, timezone){
-  var getDayOfWeek
-    , startDayOfWeek
+var moment = require('moment-timezone')
+  , getDayOfWeek = function getDayOfWeek(date, timezone){
+    parseInt(moment(date, timezone).format('d'), 10)
+    if (timezone)
+      return parseInt(moment(date).tz(timezone).format('d'), 10)
+    else return date.getDay()
+  }
+
+module.exports = function businessDayMath(inputBizDays, startDate, timezone){
+  var startDayOfWeek
     , daysToAdd
     , weeksToAdd
     , absBizDays
 
   startDate || (startDate = new Date())
 
-  getDayOfWeek = function getDayOfWeek(date){
-    if (timezone)
-      return parseInt(tz(timezone)(date, Object.keys(timezone.zones)[0], '%w'), 10)
-    else return date.getDay()
-  }
-
   absBizDays = Math.abs(inputBizDays)
 
-  startDayOfWeek = getDayOfWeek(startDate)
+  startDayOfWeek = getDayOfWeek(startDate, timezone)
 
   // get the count of weeks then set to a netative number if we're subtracting
   weeksToAdd = Math.floor(absBizDays / 5) * (inputBizDays < 0 ? -1 : 1)
