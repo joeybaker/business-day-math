@@ -1,4 +1,5 @@
 var tz = require('timezone')
+'use strict';
 
 module.exports = function(inputBizDays, startDate, timezone){
   var getDayOfWeek

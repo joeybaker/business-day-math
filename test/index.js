@@ -15,6 +15,7 @@ var test = require('prova')
   , nextNextFriPT = new Date('Fri May 23 2014 17:00:00 GMT-0700 (PST)')
   , nextMonGMT = new Date('Mon May 12 2014 00:00:00 GMT-0000')
 
+// jscs:disable disallowAnonymousFunctions
 test('works with a timezone', function(t){
   t.equal(
     addBusinessDays(
