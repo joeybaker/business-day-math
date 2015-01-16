@@ -92,5 +92,5 @@ function get_release_tag(){
 }
 
 function npm_release(){
-  npm version $(get_release_tag $1) && generate_git_changelog && git_ammend_tag &&
+  npm version $(get_release_tag $1) && generate_git_changelog && git_ammend_tag
 }
