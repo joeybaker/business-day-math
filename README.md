@@ -6,6 +6,19 @@ Business days are hard to calculate because you have to jump weekends. In additi
 
 This module allows you to accommodate all these needs.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Install](#install)
+- [Usage](#usage)
+- [Options](#options)
+- [Tests](#tests)
+- [Developing](#developing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## Install
 `npm install business-day-math`
 
@@ -28,5 +41,5 @@ var bizDays = require('business-day-math')
 Tests are [prova](https://github.com/azer/prova), based on [tape](https://github.com/substack/tape). They can be run with `npm test`.
 
 ## Developing
-To publish, run `npm publish -- patch`
+To publish, run `npm run release -- patch`
 
