@@ -28,12 +28,5 @@ var bizDays = require('business-day-math')
 Tests are [prova](https://github.com/azer/prova), based on [tape](https://github.com/substack/tape). They can be run with `npm test`.
 
 ## Developing
-To publish, run `gulp publish --bump=patch`
+To publish, run `npm publish -- patch`
 
-## Changelog
-### 2.0.0
-Now browserifiable.
-
-**Breaking change**: must now require a timezone file instead of passing a timezone string. This is for browserify compatibility.
-### 1.0.0
-Initial Release
