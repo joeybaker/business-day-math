@@ -1,4 +1,5 @@
 # Changelog
+
 ## 3.0.0
 * Switch to moment
 * no longer necessary to pass in a timezone zone file.
@@ -11,6 +12,7 @@ Now browserifiable.
 
 ## 1.0.0
 Initial Release
+
 
 
 
