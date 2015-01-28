@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.5 | 2015-01-28
+* Update release scripts
+
 ## v3.0.4 | 2015-01-27
 * Update release scripts
 
@@ -18,6 +21,7 @@ Now browserifiable.
 
 ## 1.0.0
 Initial Release
+
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "business-day-math",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Add or subtract business days from a start date. Is timezone aware.",
   "main": "index.js",
   "directories": {
